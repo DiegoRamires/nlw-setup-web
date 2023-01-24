@@ -63,7 +63,7 @@ export function HabitsList({ date, onCompletedChanged }: HabitListProps) {
             key={habit.id}
             onCheckedChange={() => handleToggleHabit(habit.id)}
             checked={habitsInfo.completedHabits.includes(habit.id)}
-            className='flex items-center gap-3 group'
+            className='flex items-center gap-3 group focus:outline-none'
             disabled={isDateInPast}
           >
             <div className='
@@ -79,6 +79,10 @@ export function HabitsList({ date, onCompletedChanged }: HabitListProps) {
               group-data-[state=checked]:bg-green-500
               group-data-[state=checked]:border-green-500
               transition-colors
+              group-focus:ring-2
+              group-focus:ring-violet-700
+              group-focus:ring-offset-2
+              group-focus:ring-offset-background
             '>
               <Checkbox.Indicator>
                 <Check size={20} className='text-white'/>
