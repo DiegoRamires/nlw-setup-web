@@ -88,6 +88,7 @@ export function NewHabitForm() {
                   border-zinc-800
                   group-data-[state=checked]:bg-green-500
                   group-data-[state=checked]:border-green-500
+                  transition-colors
                 '>
                   <Checkbox.Indicator>
                     <Check size={20} className='text-white'/>
@@ -115,6 +116,7 @@ export function NewHabitForm() {
           font-semibold
           bg-green-600
           hover:bg-green-500
+          transition-colors
         "
       >
         <Check size={20} weight="bold" />
