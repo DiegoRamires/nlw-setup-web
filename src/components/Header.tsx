@@ -25,6 +25,11 @@ export function Header() {
             gap-3
             hover:border-violet-300
             transition-colors
+            focus:outline-none
+            focus:ring-2
+            focus:ring-violet-700
+            focus:ring-offset-2
+            focus:ring-offset-background
           '
         >
           <Plus size={20} className='text-violet-500' />
