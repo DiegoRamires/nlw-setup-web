@@ -5,7 +5,8 @@ import { Check } from "phosphor-react";
 import { api } from "../lib/axios";
 
 interface HabitListProps {
-  date: Date
+  date: Date;
+  onCompletedChanged: (completed: number) => void
 }
 
 interface HabitsInfoProps {
@@ -17,7 +18,7 @@ interface HabitsInfoProps {
   completedHabits: string[]
 }
 
-export function HabitsList({ date }: HabitListProps) {
+export function HabitsList({ date, onCompletedChanged }: HabitListProps) {
   const [habitsInfo, setHabitsInfo] = useState<HabitsInfoProps>()
 
   useEffect(() => {
@@ -48,6 +49,8 @@ export function HabitsList({ date }: HabitListProps) {
       possibleHabits: habitsInfo!.possibleHabits,
       completedHabits,
     })
+
+    onCompletedChanged(completedHabits.length)
   }
 
   const isDateInPast = dayjs(date).endOf('day').isBefore(new Date())
