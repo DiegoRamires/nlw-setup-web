@@ -24,6 +24,7 @@ export function Header() {
             items-center
             gap-3
             hover:border-violet-300
+            transition-colors
           '
         >
           <Plus size={20} className='text-violet-500' />
