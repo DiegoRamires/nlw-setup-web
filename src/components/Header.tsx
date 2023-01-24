@@ -56,7 +56,16 @@ export function Header() {
           >
             <Dialog.Close
               className="
-                absolute right-6 top-6 text-zinc-400 hover:text-zinc-200
+                absolute
+                right-6
+                top-6
+                rounded-lg
+                text-zinc-400
+                hover:text-zinc-200
+                focus:ring-2
+                focus:ring-violet-700
+                focus:ring-offset-2
+                focus:ring-offset-zinc-900
               "
             >
               <X size={24} aria-label="Fechar"/>
