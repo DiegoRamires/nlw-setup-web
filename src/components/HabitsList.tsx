@@ -63,7 +63,7 @@ export function HabitsList({ date, onCompletedChanged }: HabitListProps) {
             key={habit.id}
             onCheckedChange={() => handleToggleHabit(habit.id)}
             checked={habitsInfo.completedHabits.includes(habit.id)}
-            className='flex items-center gap-3 group focus:outline-none'
+            className='flex items-center gap-3 group focus:outline-none disabled:cursor-not-allowed'
             disabled={isDateInPast}
           >
             <div className='
